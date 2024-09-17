@@ -46,7 +46,7 @@ const createAccount = (req, res) => {
         return true;
       }
     })
-    return res.json({data: accFound})
+    return res.status(200).json({data: accFound})
   };
   module.exports = {
     getAllAccounts,
