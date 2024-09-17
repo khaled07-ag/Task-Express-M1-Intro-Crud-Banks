@@ -18,6 +18,25 @@ app.post("/create", (req, res) => {
     data: accounts,
   });
 });
+app.delete("/delete/:id",(req,res)=>{
+  const {id} = req.params;
+  const updatedAcc = accounts.filter((account)=>{
+    if(account.id != id){
+      return true;
+    }
+    
+  })
+  return res.status(200).json({data: updatedAcc});
+})
+app.put("/update/:id",(req,res)=>{
+  const {id} = req.params;
+  const accFound = accounts.find((accounts)=>{
+    if(accounts.id == id){
+      return true;
+    }
+  })
+  
+})
 app.listen(8000, () => {
   console.log("first");
 });
