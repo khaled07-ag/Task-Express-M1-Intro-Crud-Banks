@@ -40,9 +40,9 @@ const createAccount = (req, res) => {
     return res.json({data : accFound});
   };
   const getOneAccount = (req,res)=>{
-    const {id} = req.params;
+    const {username} = req.params;
     const accFound = accounts.find((accounts)=>{
-      if(accounts.id == id){
+      if(accounts.username == username){
         return true;
       }
     })

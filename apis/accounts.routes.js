@@ -10,6 +10,6 @@ accountsRouter.get("/accounts", getAllAccounts);
 
   accountsRouter.put("/update/:id", updateAccount)
   
-  accountsRouter.get("/account/:id", getOneAccount)
+  accountsRouter.get("/account/:username", getOneAccount)
 
 module.exports = accountsRouter;
